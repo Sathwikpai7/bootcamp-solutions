@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootcamp calci</title>
+</head>
+
+<body>
+    <style >
+        .container{
+            width:400px;
+            border:5px solid black;
+            border-radius: 30px;
+
+
+        }
+        .text-center{
+            text-align:center;
+            font-size: 60px;
+            margin: 0 0 ;
+        }
+        .bg-red{
+            background:rgb(255, 187, 1);
+        }
+        .mx-auto{
+            margin:auto;
+        }
+       
+        .button{
+            background-color: grey;
+            color: black;
+            padding:20px;
+            margin:0 20px;
+            width: 70px;
+            height: 70px;
+            font-size: medium;
+            border: 4px solid rgb(0, 0, 0);
+            border-radius: 8px;
+            cursor:pointer;/* why? */
+            margin-left:8px;
+            margin-right: 8px;
+
+ 
+        }
+        .flex{
+            display:flex;
+            justify-content: center;
+          
+        }
+        .flex-col{
+            flex-direction: column;
+
+        }
+        .items-center{
+            align-items: center;
+        }
+        .row{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .input{
+        background-color: rgb(34, 107, 0);
+        color: black;
+          font-size: 20px; 
+          padding:15px 35px;
+          border-radius: 10px;
+          border:5px solid black;
+        }
+
+
+        
+    
+    </style>
+    
+    <div class="container flex flex-col items-center bg-red mx-auto m-w-20">
+        
+        <h1 class="text-center" >Casio</h1><div class="row">
+            <input class="input" type="text"/>
+        </div>
+        <div class="row">
+            <button class="button">C</button>
+            <button class="button">M</button>
+            <button class="button">M+</button>
+            <button class="button">M-</button>
+    
+            </div>
+        <div class="row">
+        <button class="button">7</button>
+        <button class="button">8</button>
+        <button class="button">9</button>
+        <button class="button">*</button>
+
+        </div>
+        <div class="row">
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">/</button>
+    
+            </div>
+            <div class="row">
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
+                <button class="button">+</button>
+        
+                </div>
+                <div class="row">
+                    <button class="button">0</button>
+                    <button class="button">.</button>
+                    <button class="button">=</button>
+                    <button class="button">-</button>
+            
+                    </div>
+                    
+    </div>
+    <script>
+        let string="";
+        let memory="";
+        let buttons=document.querySelectorAll('.button');
+        Array.from(buttons).forEach((button)=>{
+            button.addEventListener('click',(e)=>{
+                if(e.target.innerHTML=='M+'){
+                    memory=eval(string);
+                    string="";
+                    document.querySelector('input').value="";
+
+                }else if(e.target.innerHTML=='M-'){
+                    memory="";
+                    
+                    
+
+                  
+                    document.querySelector('input').value="";
+
+                }else if(e.target.innerHTML=='M'){
+                    string+=memory;
+                    document.querySelector('input').value=memory;
+
+                }
+                else if(e.target.innerHTML=='C'){
+                    string="";
+                    memory="";
+                    document.querySelector('input').value="";
+
+                }
+                else if(e.target.innerHTML=='='){
+                    string =eval(string)
+                    document.querySelector('input').value=string;
+
+                }else{
+                string=string+e.target.innerHTML;
+                document.querySelector('input').value=string;
+            }})
+        })
+
+    </script>
+    
+</body>
+</html>

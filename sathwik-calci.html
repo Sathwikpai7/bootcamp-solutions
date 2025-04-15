@@ -1,0 +1,335 @@
+<!-- <!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+ <style>
+      
+       
+        
+h1 {
+    font-size: 48px;
+    
+    margin-bottom: 20px;
+   border-radius: 5px;
+    background-color: rgb(12, 177, 12);
+    width:390px;
+    height:60px;
+    border-style:dashed;
+    border-color: #000;
+    border-bottom: #000;
+    color:white;
+    text-align: center;
+}
+body {
+    display: flex;
+        flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+}
+        .input1{
+           margin:10px;
+        }
+        .input2{
+            margin:10px;
+        }
+        
+            #buttons {
+    display: flex;
+
+    gap: 10px;
+
+    padding: 20px;
+    background-color:aqua;
+    border-style: dashed;
+    border-top: #000;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+        
+      
+#buttons button {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #fff;
+
+ 
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+
+#my1:hover{
+    background-color: gold;
+
+}#my2:hover{
+    background-color:gold;
+
+}#my3:hover{
+    background-color: gold;
+
+}
+#my4:hover{
+    background-color: gold;
+
+}
+#my5:hover{
+    background-color: greenyellow;
+
+}
+
+        
+    </style>
+  
+    <h1 >0</h1>
+    <div class="input1">
+    <input type="number" id="box1" placeholder="first number">
+
+    <br>
+    
+</div>
+<div class="input2">
+    <input type="number" id="box2" placeholder="second number">
+</div>
+    
+<div id="buttons"> 
+    <button id="my1" >+</button>
+    <button id="my2" >-</button>
+    <button id="my3" >/</button>
+    <button id="my4" >*</button>
+    <button id="my5" >reset </button>
+     </div>
+
+
+    <script>
+        let sum=0;
+        let display=document.querySelector("h1");
+        
+
+        let place1=document.getElementById("box1");
+        let place2=document.getElementById("box2");
+        let a=0;
+        let b=0;
+        a= new Number(place1.textContent);
+        b= new Number(place2.textContent);
+        document.getElementById("my1").addEventListener("click",function(){
+            a= new Number(place1.value);
+            b= new Number(place2.value);
+            display.innerText=a+b;
+        })
+        document.getElementById("my2").addEventListener("click",function(){
+            a= new Number(place1.value);
+            b= new Number(place2.value);
+            display.innerText=a-b;
+        })
+        document.getElementById("my3").addEventListener("click",function(){
+            a= new Number(place1.value);
+            b= new Number(place2.value);
+            display.innerText=a/b;
+           
+        })
+        document.getElementById("my4").addEventListener("click",function(){
+            a= new Number(place1.value);
+            b= new Number(place2.value);
+            display.innerText=a*b;
+           
+        })
+        document.getElementById("my5").addEventListener("click",function(){
+            
+            display.innerText=0;
+           
+        })
+        
+        
+
+        
+
+
+        
+
+
+    
+
+
+
+
+
+    </script>
+    </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootcamp calci</title>
+</head>
+
+<body>
+    <style >
+        .container{
+            width:400px;
+            border:5px solid black;
+            border-radius: 30px;
+
+
+        }
+        .text-center{
+            text-align:center;
+            font-size: 60px;
+            margin: 0 0 ;
+        }
+        .bg-red{
+            background:rgb(255, 187, 1);
+        }
+        .mx-auto{
+            margin:auto;
+        }
+       
+        .button{
+            background-color: grey;
+            color: black;
+            padding:20px;
+            margin:0 20px;
+            width: 70px;
+            height: 70px;
+            font-size: medium;
+            border: 4px solid rgb(0, 0, 0);
+            border-radius: 8px;
+            cursor:pointer;/* why? */
+            margin-left:8px;
+            margin-right: 8px;
+
+ 
+        }
+        .flex{
+            display:flex;
+            justify-content: center;
+          
+        }
+        .flex-col{
+            flex-direction: column;
+
+        }
+        .items-center{
+            align-items: center;
+        }
+        .row{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .input{
+        background-color: rgb(34, 107, 0);
+        color: black;
+          font-size: 20px; 
+          padding:15px 35px;
+          border-radius: 10px;
+          border:5px solid black;
+        }
+
+
+        
+    
+    </style>
+    
+    <div class="container flex flex-col items-center bg-red mx-auto m-w-20">
+        
+        <h1 class="text-center" >Casio</h1><div class="row">
+            <input class="input" type="text"/>
+        </div>
+        <div class="row">
+            <button class="button">C</button>
+            <button class="button">M</button>
+            <button class="button">M+</button>
+            <button class="button">M-</button>
+    
+            </div>
+        <div class="row">
+        <button class="button">7</button>
+        <button class="button">8</button>
+        <button class="button">9</button>
+        <button class="button">*</button>
+
+        </div>
+        <div class="row">
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">/</button>
+    
+            </div>
+            <div class="row">
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
+                <button class="button">+</button>
+        
+                </div>
+                <div class="row">
+                    <button class="button">0</button>
+                    <button class="button">.</button>
+                    <button class="button">=</button>
+                    <button class="button">-</button>
+            
+                    </div>
+                    
+    </div>
+    <script>
+        let string="";
+        let memory="";
+        let buttons=document.querySelectorAll('.button');
+        Array.from(buttons).forEach((button)=>{
+            button.addEventListener('click',(e)=>{
+                if(e.target.innerHTML=='M+'){
+                    memory=eval(string);
+                    string="";
+                    document.querySelector('input').value="";
+
+                }else if(e.target.innerHTML=='M-'){
+                    memory="";
+                    
+                    
+
+                  
+                    document.querySelector('input').value="";
+
+                }else if(e.target.innerHTML=='M'){
+                    string+=memory;
+                    document.querySelector('input').value=memory;
+
+                }
+                else if(e.target.innerHTML=='C'){
+                    string="";
+                    memory="";
+                    document.querySelector('input').value="";
+
+                }
+                else if(e.target.innerHTML=='='){
+                    string =eval(string)
+                    document.querySelector('input').value=string;
+
+                }else{
+                string=string+e.target.innerHTML;
+                document.querySelector('input').value=string;
+            }})
+        })
+
+    </script>
+    
+</body>
+</html>

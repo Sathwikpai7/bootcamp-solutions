@@ -1,157 +1,157 @@
-<!-- <!DOCTYPE html>
+<!-- <!DOCTYPE html>-->
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
- <style>
+<!--<html>-->
+<!--    <head>-->
+<!--        <meta charset="utf-8">-->
+<!--        <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--        <title></title>-->
+<!--        <meta name="description" content="">-->
+<!--        <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--        <link rel="stylesheet" href="">-->
+<!--    </head>-->
+<!--    <body>-->
+<!-- <style>-->
       
        
         
-h1 {
-    font-size: 48px;
+<!--h1 {-->
+<!--    font-size: 48px;-->
     
-    margin-bottom: 20px;
-   border-radius: 5px;
-    background-color: rgb(12, 177, 12);
-    width:390px;
-    height:60px;
-    border-style:dashed;
-    border-color: #000;
-    border-bottom: #000;
-    color:white;
-    text-align: center;
-}
-body {
-    display: flex;
-        flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f3f3f3;
-    font-family: Arial, sans-serif;
-}
-        .input1{
-           margin:10px;
-        }
-        .input2{
-            margin:10px;
-        }
+<!--    margin-bottom: 20px;-->
+<!--   border-radius: 5px;-->
+<!--    background-color: rgb(12, 177, 12);-->
+<!--    width:390px;-->
+<!--    height:60px;-->
+<!--    border-style:dashed;-->
+<!--    border-color: #000;-->
+<!--    border-bottom: #000;-->
+<!--    color:white;-->
+<!--    text-align: center;-->
+<!--}-->
+<!--body {-->
+<!--    display: flex;-->
+<!--        flex-direction: column;-->
+<!--    align-items: center;-->
+<!--    justify-content: center;-->
+<!--    height: 100vh;-->
+<!--    background-color: #f3f3f3;-->
+<!--    font-family: Arial, sans-serif;-->
+<!--}-->
+<!--        .input1{-->
+<!--           margin:10px;-->
+<!--        }-->
+<!--        .input2{-->
+<!--            margin:10px;-->
+<!--        }-->
         
-            #buttons {
-    display: flex;
+<!--            #buttons {-->
+<!--    display: flex;-->
 
-    gap: 10px;
+<!--    gap: 10px;-->
 
-    padding: 20px;
-    background-color:aqua;
-    border-style: dashed;
-    border-top: #000;
-    border-radius: 10px;
-    margin-top: 20px;
-}
+<!--    padding: 20px;-->
+<!--    background-color:aqua;-->
+<!--    border-style: dashed;-->
+<!--    border-top: #000;-->
+<!--    border-radius: 10px;-->
+<!--    margin-top: 20px;-->
+<!--}-->
         
       
-#buttons button {
-    width: 60px;
-    height: 60px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: #fff;
+<!--#buttons button {-->
+<!--    width: 60px;-->
+<!--    height: 60px;-->
+<!--    font-size: 20px;-->
+<!--    font-weight: bold;-->
+<!--    background-color: #fff;-->
 
  
-    border-radius: 10px;
+<!--    border-radius: 10px;-->
 
-    transition: 0.2s;
-}
+<!--    transition: 0.2s;-->
+<!--}-->
 
 
-#my1:hover{
-    background-color: gold;
+<!--#my1:hover{-->
+<!--    background-color: gold;-->
 
-}#my2:hover{
-    background-color:gold;
+<!--}#my2:hover{-->
+<!--    background-color:gold;-->
 
-}#my3:hover{
-    background-color: gold;
+<!--}#my3:hover{-->
+<!--    background-color: gold;-->
 
-}
-#my4:hover{
-    background-color: gold;
+<!--}-->
+<!--#my4:hover{-->
+<!--    background-color: gold;-->
 
-}
-#my5:hover{
-    background-color: greenyellow;
+<!--}-->
+<!--#my5:hover{-->
+<!--    background-color: greenyellow;-->
 
-}
+<!--}-->
 
         
-    </style>
+<!--    </style>-->
   
-    <h1 >0</h1>
-    <div class="input1">
-    <input type="number" id="box1" placeholder="first number">
+<!--    <h1 >0</h1>-->
+<!--    <div class="input1">-->
+<!--    <input type="number" id="box1" placeholder="first number">-->
 
-    <br>
+<!--    <br>-->
     
-</div>
-<div class="input2">
-    <input type="number" id="box2" placeholder="second number">
-</div>
+<!--</div>-->
+<!--<div class="input2">-->
+<!--    <input type="number" id="box2" placeholder="second number">-->
+<!--</div>-->
     
-<div id="buttons"> 
-    <button id="my1" >+</button>
-    <button id="my2" >-</button>
-    <button id="my3" >/</button>
-    <button id="my4" >*</button>
-    <button id="my5" >reset </button>
-     </div>
+<!--<div id="buttons"> -->
+<!--    <button id="my1" >+</button>-->
+<!--    <button id="my2" >-</button>-->
+<!--    <button id="my3" >/</button>-->
+<!--    <button id="my4" >*</button>-->
+<!--    <button id="my5" >reset </button>-->
+<!--     </div>-->
 
 
-    <script>
-        let sum=0;
-        let display=document.querySelector("h1");
+<!--    <script>-->
+<!--        let sum=0;-->
+<!--        let display=document.querySelector("h1");-->
         
 
-        let place1=document.getElementById("box1");
-        let place2=document.getElementById("box2");
-        let a=0;
-        let b=0;
-        a= new Number(place1.textContent);
-        b= new Number(place2.textContent);
-        document.getElementById("my1").addEventListener("click",function(){
-            a= new Number(place1.value);
-            b= new Number(place2.value);
-            display.innerText=a+b;
-        })
-        document.getElementById("my2").addEventListener("click",function(){
-            a= new Number(place1.value);
-            b= new Number(place2.value);
-            display.innerText=a-b;
-        })
-        document.getElementById("my3").addEventListener("click",function(){
-            a= new Number(place1.value);
-            b= new Number(place2.value);
-            display.innerText=a/b;
+<!--        let place1=document.getElementById("box1");-->
+<!--        let place2=document.getElementById("box2");-->
+<!--        let a=0;-->
+<!--        let b=0;-->
+<!--        a= new Number(place1.textContent);-->
+<!--        b= new Number(place2.textContent);-->
+<!--        document.getElementById("my1").addEventListener("click",function(){-->
+<!--            a= new Number(place1.value);-->
+<!--            b= new Number(place2.value);-->
+<!--            display.innerText=a+b;-->
+<!--        })-->
+<!--        document.getElementById("my2").addEventListener("click",function(){-->
+<!--            a= new Number(place1.value);-->
+<!--            b= new Number(place2.value);-->
+<!--            display.innerText=a-b;-->
+<!--        })-->
+<!--        document.getElementById("my3").addEventListener("click",function(){-->
+<!--            a= new Number(place1.value);-->
+<!--            b= new Number(place2.value);-->
+<!--            display.innerText=a/b;-->
            
-        })
-        document.getElementById("my4").addEventListener("click",function(){
-            a= new Number(place1.value);
-            b= new Number(place2.value);
-            display.innerText=a*b;
+<!--        })-->
+<!--        document.getElementById("my4").addEventListener("click",function(){-->
+<!--            a= new Number(place1.value);-->
+<!--            b= new Number(place2.value);-->
+<!--            display.innerText=a*b;-->
            
-        })
-        document.getElementById("my5").addEventListener("click",function(){
+<!--        })-->
+<!--        document.getElementById("my5").addEventListener("click",function(){-->
             
-            display.innerText=0;
+<!--            display.innerText=0;-->
            
-        })
+<!--        })-->
         
         
 
@@ -167,9 +167,9 @@ body {
 
 
 
-    </script>
-    </body>
-</html> -->
+<!--    </script>-->
+<!--    </body>-->
+<!--</html> -->-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -309,8 +309,8 @@ body {
                     document.querySelector('input').value="";
 
                 }else if(e.target.innerHTML=='M'){
-                    string+=memory;
-                    document.querySelector('input').value=memory;
+                    string=string+memory;
+                    document.querySelector('input').value=string;
 
                 }
                 else if(e.target.innerHTML=='C'){
